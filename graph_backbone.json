@@ -1,0 +1,721 @@
+{
+	"graph1": {
+		"diagraphModel": {
+			"nodes": {
+				"A": {
+					"_level": 0,
+					"child": ["B", "C"],
+					"parent": [],
+					"sibling": [],
+					"height": 4,
+					"width": 3
+				},
+				"B": {
+					"_level": 1,
+					"child": [],
+					"parent": ["A"],
+					"sibling": ["C"],
+					"height": 2.5,
+					"width": 2.5
+				},
+				"C": {
+					"_level": 1,
+					"child": [],
+					"parent": ["A"],
+					"sibling": ["B"],
+					"height": 3,
+					"width": 6
+				}
+			},
+			"edges": {
+				"A::B": {
+					"from": "A",
+					"to": "B",
+					"proximity": false
+				},
+				"A::C": {
+					"from": "A",
+					"to": "C",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": ["A::B", "A::C"],
+				"B": [],
+				"C": []
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["A"],
+				"1": ["B", "C"]
+			}
+		}
+	},
+	"graph2" : {
+		"diagraphModel": {
+			"nodes": {
+				"A": {
+					"_level": 0,
+					"child": [],
+					"parent": ["B", "C"],
+					"sibling": []
+				},
+				"B": {
+					"_level": 1,
+					"child": ["A"],
+					"parent": [],
+					"sibling": []
+				},
+				"C": {
+					"_level": 1,
+					"child": ["A"],
+					"parent": [],
+					"sibling": []
+				}
+			},
+			"edges": {
+				"B::A": {
+					"from": "B",
+					"to": "A",
+					"proximity": false
+				},
+				"C::A": {
+					"from": "C",
+					"to": "A",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": [],
+				"B": ["B::A"],
+				"C": ["C::A"]
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["A"],
+				"1": ["B", "C"]
+			}
+		}
+	},
+	"graph3" : {
+		"diagraphModel": {
+			"nodes": {
+				"A": {
+					"_level": 0,
+					"child": ["B", "C"],
+					"parent": [],
+					"sibling": [],
+					"height": 1,
+					"width": 1
+				},
+				"B": {
+					"_level": 0,
+					"child": [],
+					"parent": ["A"],
+					"sibling": ["C"],
+					"height": 1,
+					"width": 1
+				},
+				"C": {
+					"_level": 1,
+					"child": [],
+					"parent": ["A"],
+					"sibling": ["B"],
+					"height": 1,
+					"width": 1
+				}
+			},
+			"edges": {
+				"A::B": {
+					"from": "A",
+					"to": "B",
+					"proximity": false
+				},
+				"A::C": {
+					"from": "A",
+					"to": "C",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": ["A::B", "A::C"],
+				"B": [],
+				"C": []
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["B", "A"],
+				"1": ["C"]
+			}
+		}		
+	},
+	"graph4" : {
+		"diagraphModel": {
+			"nodes": {
+				"A": {
+					"_level": 0,
+					"child": ["B", "C"],
+					"parent": [],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"B": {
+					"_level": 0,
+					"child": [],
+					"parent": ["A"],
+					"sibling": ["C"],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"C": {
+					"_level": 0,
+					"child": [],
+					"parent": ["A"],
+					"sibling": ["B"],
+					"height": 0.5,
+					"width": 0.5
+				}
+			},
+			"edges": {
+				"A::B": {
+					"from": "A",
+					"to": "B",
+					"proximity": false
+				},
+				"A::C": {
+					"from": "A",
+					"to": "C",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": ["A::B", "A::C"],
+				"B": [],
+				"C": []
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["B", "A", "C"],
+				"1": []
+			}
+		}		
+	},
+	"graph5" : {
+		"diagraphModel": {
+			"nodes": {
+				"O": {
+					"_level": 0,
+					"child": ["B"],
+					"parent": [],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"A": {
+					"_level": 0,
+					"child": ["B"],
+					"parent": [],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"B": {
+					"_level": 1,
+					"child": [],
+					"parent": ["A", "C", "O"],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"C": {
+					"_level": 0,
+					"child": ["B"],
+					"parent": [],
+					"sibling": [],
+					"height": 1,
+					"width": 1
+				}
+			},
+			"edges": {
+				"A::B": {
+					"from": "A",
+					"to": "B",
+					"proximity": false
+				},
+				"C::B": {
+					"from": "C",
+					"to": "B",
+					"proximity": false
+				},
+				"O::B": {
+					"from": "O",
+					"to": "B",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": ["A::B"],
+				"B": [],
+				"C": ["C::B"],
+				"O": ["O::B"]
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["A", "O", "C"],
+				"1": ["B"]
+			}
+		}			
+	},
+	"graph6" : {
+		"diagraphModel": {
+			"nodes": {
+				"A": {
+					"_level": 0,
+					"child": ["C"],
+					"parent": [],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"B": {
+					"_level": 0,
+					"child": [],
+					"parent": ["C"],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"C": {
+					"_level": 1,
+					"child": ["B"],
+					"parent": ["A"],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				}
+			},
+			"edges": {
+				"A::C": {
+					"from": "A",
+					"to": "C",
+					"proximity": false
+				},
+				"C::B": {
+					"from": "C",
+					"to": "B",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": ["A::C"],
+				"B": [],
+				"C": ["C::B"]
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["A", "B"],
+				"1": ["C"]
+			}
+		}
+	},
+	"graph7" : {
+		"diagraphModel": {
+			"nodes": {
+				"A": {
+					"_level": 0,
+					"child": ["B"],
+					"parent": [],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				},
+				"B": {
+					"_level": 1,
+					"child": [],
+					"parent": ["A"],
+					"sibling": [],
+					"height": 0.5,
+					"width": 0.5
+				}
+			},
+			"edges": {
+				"A::B": {
+					"from": "A",
+					"to": "B",
+					"proximity": false
+				}
+			},
+			"adjacencyList": {
+				"A": ["A::B"],
+				"B": []
+			}
+		},
+		"diagraphView": {
+			"depictionLevel": {
+				"0": ["A"],
+				"1": ["B"]
+			}
+		}
+	},
+	"graph8" : {
+	"diagraphModel": {
+		"nodes": {
+			"Ed": {
+				"_level": 0,
+				"child": ["Edd", "Eddy"],
+				"parent": [],
+				"sibling": [],
+				"height": 5,
+				"width": 6
+			},
+			"Edd": {
+				"_level": 1,
+				"child": ["A","B","C","D"],
+				"parent": ["Ed","Eddy"],
+				"sibling": ["Eddy"],
+				"height": 2.5,
+				"width": 3
+			},
+			"Eddy": {
+				"_level": 1,
+				"child": ["Edd","E","F","G","H","I","J","K","L"],
+				"parent": ["Ed"],
+				"sibling": ["Edd"],
+				"height": 2.5,
+				"width": 3
+			},
+			"A": {
+				"_level": 2,
+				"child": ["1","2","3"],
+				"parent": ["Edd"],
+				"sibling": ["B","C","D"],
+				"height": 2.5,
+				"width": 3	
+			},
+			"B": {
+				"_level": 2,
+				"child": ["4"],
+				"parent": ["Edd"],
+				"sibling": ["A","C","D"],
+				"height": 2.5,
+				"width": 3
+			},
+			"C": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Edd"],
+				"sibling": ["A","B","D"],
+				"height": 2.5,
+				"width": 3
+			},
+			"D": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Edd"],
+				"sibling": ["A","B","C"],
+				"height": 2.5,
+				"width": 3
+			},
+			"E": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Eddy"],
+				"sibling": ["F","G","H","I","J","K","L"],
+				"height": 2.5,
+				"width": 3
+			},
+			"F": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Eddy"],
+				"sibling": ["E","G","H","I","J","K","L"],
+				"height": 2.5,
+				"width": 3
+			},
+			"G": {
+				"_level": 2,
+				"child": ["5"],
+				"parent": ["Eddy"],
+				"sibling": ["E","F","H","I","J","K","L"],
+				"height": 2.5,
+				"width": 3
+			},
+			"H": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Eddy"],
+				"sibling": ["F","G","E","I","J","K","L"],
+				"height": 2.5,
+				"width": 3
+			},
+			"I": {
+				"_level": 2,
+				"child": ["J"],
+				"parent": ["Eddy"],
+				"sibling": ["F","G","H","E","J","K","L"],
+				"height": 2.5,
+				"width": 3
+			},
+			"J": {
+				"_level": 2,
+				"child": ["6"],
+				"parent": ["Eddy","I"],
+				"sibling": ["F","G","H","I","E","K","L"],
+				"height": 8,
+				"width": 4
+			},
+			"K": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Eddy"],
+				"sibling": ["F","G","H","I","J","E","L"],
+				"height": 2.5,
+				"width": 3
+			},
+			"L": {
+				"_level": 2,
+				"child": [],
+				"parent": ["Eddy"],
+				"sibling": ["F","G","H","I","J","K","E"],
+				"height": 2.5,
+				"width": 3
+			},
+			"1": {
+				"_level": 3,
+				"child": [],
+				"parent": ["A"],
+				"sibling": ["2","3"],
+				"height": 2.5,
+				"width": 3
+			},
+			"2": {
+				"_level": 3,
+				"child": [],
+				"parent": ["A"],
+				"sibling": ["1","3"],
+				"height": 2.5,
+				"width": 3
+			},
+			"3": {
+				"_level": 3,
+				"child": [],
+				"parent": ["A"],
+				"sibling": ["1","2"],
+				"height": 2.5,
+				"width": 3
+			},
+			"4": {
+				"_level": 3,
+				"child": [],
+				"parent": ["B"],
+				"sibling": [],
+				"height": 2.5,
+				"width": 3
+			},
+			"5": {
+				"_level": 3,
+				"child": [],
+				"parent": ["G"],
+				"sibling": ["6"],
+				"height": 2.5,
+				"width": 3
+			},
+			"6": {
+				"_level": 3,
+				"child": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"parent": ["J"],
+				"sibling": [],
+				"height": 2.5,
+				"width": 3
+			},
+			"X": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X1","X2","X3","X4","X5","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X1": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X2","X3","X4","X5","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X2": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X3","X4","X5","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X3": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X4","X5","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X4": {
+				"_level": 4,
+				"child": ["O.O"],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X5","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X5": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X6","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X6": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X7","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X7": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X8","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X8": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X9","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X9": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X10","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X10": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X9","X11","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X11": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X9","X10","X12","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X12": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X9","X10","X11","X13","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X13": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X9","X10","X11","X12","X14"],
+				"height": 2.5,
+				"width": 3
+			},
+			"X14": {
+				"_level": 4,
+				"child": [],
+				"parent": ["6"],
+				"sibling": ["X","X1","X2","X3","X4","X5","X6","X7","X8","X9","X10","X11","X12","X13"],
+				"height": 2.5,
+				"width": 3
+			},
+			"O.O": {
+				"_level": 5,
+				"child": [],
+				"parent": ["X4"],
+				"sibling": [],
+				"height": 1,
+				"width": 1
+			}
+		},
+		"edges": {
+			"Ed::Edd": {
+				"from": "Ed",
+				"to": "Edd",
+				"proximity": false
+			},
+			"Ed::Eddy": {
+				"from": "Ed",
+				"to": "Eddy",
+				"proximity": false
+			},
+			"J::I": {
+				"from": "J",
+				"to": "I",
+				"proximity": true
+			}
+		},
+		"adjacencyList": {
+			"Ed": ["Ed::Edd","Ed::Eddy"],
+			"Edd": ["Edd::A","Edd::B","Edd::C","Edd::D"],
+			"Eddy": ["Eddy::Edd","Eddy::E","Eddy::F","Eddy::G","Eddy::H","Eddy::I","Eddy::J","Eddy::K","Eddy::L"],
+			"A": ["A::1","A::2","A::3","A::X"],
+			"B": ["B::4"],
+			"C": [],
+			"D": [],
+			"E": [],
+			"F": [],
+			"G": ["G::5"],
+			"H": [],
+			"I": ["I::J"],
+			"J": ["J::6"],
+			"K": [],
+			"L": [],
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": ["6::X", "6::X1", "6::X2", "6::X3", "6::X4", "6::X5", "6::X6", "6::X7", "6::X8", "6::X9", "6::X10", "6::X11", "6::X12", "6::X13", "6::X14"],
+			"X4": ["X4::O.O"]
+
+		}
+	},
+	"diagraphView": {
+		"depictionLevel": {
+			"0": ["Ed"],
+			"1": ["Edd", "Eddy"],
+			"2": ["A","B","C","D","E","F","G","H","I","J","K","L"],
+			"3": ["1","2","3","4","5","6"],
+			"4": ["X", "X1", "X2", "X3", "X4", "X5", "X6", "X7", "X8", "X9", "X10", "X11", "X12", "X13", "X14"],
+			"5": ["O.O"]
+		}
+	}
+	}
+}
