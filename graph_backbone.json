@@ -200,8 +200,7 @@
 		},
 		"diagraphView": {
 			"depictionLevel": {
-				"0": ["B", "A", "C"],
-				"1": []
+				"0": ["B", "A", "C"]
 			}
 		}		
 	},

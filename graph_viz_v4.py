@@ -82,6 +82,13 @@ def generate_y_coordinates(nodes, edges, depiction_level, childless_list, V, mod
 				y_children = [y_coord_dict[i] for i in nodes[node]["child"] if i not in current_layer]
 				y_coord_dict[node] = np.mean(y_children)
 
+	if n == 1:
+		current_layer = depiction_level["0"]
+		for node in current_layer:
+			if node not in y_coord_dict:
+				y_children = [y_coord_dict[i] for i in nodes[node]["child"]]
+				y_coord_dict[node] = np.mean(y_children)
+
 	y_coord_dict = adjust_proximity(y_coord_dict, nodes, edges, mode)
 
 	return y_coord_dict
@@ -148,9 +155,18 @@ def plot_coord_graph(adjacency_list, depiction_level, coord_dict, nodes, mode='v
 		posx, posy = (x+x1)/2, (y+y1)/2
 		y_step = 0.05 * (y1-y)
 		x_step = 0.05 * (x1-x)
-		line = plt.plot([x,x1],[y,y1],color='black')[0]
+		line = ax.plot([x,x1],[y,y1],color='black')[0]
 		#plt.arrow(posx, posy, x_step, y_step, shape='full', length_includes_head=True, head_width=0.001)
 		line.axes.annotate("", xy=(posx+x_step,posy+y_step), xytext=(posx, posy), arrowprops=dict(arrowstyle="-|>"))
+
+	# get and set axes limits
+	MIN_LIM = 7.5
+	left, right = ax.get_xlim()
+	if np.abs(left-right) < MIN_LIM:
+		ax.set_xlim((left-MIN_LIM, right+MIN_LIM))
+	bottom, top = ax.get_ylim()
+	if np.abs(bottom-top) < MIN_LIM:
+		ax.set_ylim((bottom-MIN_LIM, top+MIN_LIM))
 
 	# show graph
 	plt.show()
@@ -169,6 +185,8 @@ def main():
 
 	mode = input("Enter view (vertical/horizontal): ")
 	coord_dict = generate_coordinates(nodes, edges, depiction_level, childless_list, mode)
+	#print(depiction_level)
+	#print(coord_dict)
 
 	# plot graph
 	plot_coord_graph(adjacency_list, depiction_level, coord_dict, nodes, mode)
